@@ -59,7 +59,14 @@ $variable: global-value;
 ## mixin
 
 參考: https://icguanyu.github.io/scss/scss_2  
-使用時機：需要大量重複使用到的屬性。
+使用時機：需要大量重複使用到的屬性
+
+與 extend 不同之處，參考: https://stackoverflow.com/a/30744854/5134658
+
+- 編譯後結果不同，extend 會用 , 放一起；mixin 則會各別放(單純繼承，用 extend 比較好)
+- mixin 能接變數來使用
+
+雖然都可以做到一樣的事情，但通常是，需要接收變數就使用 mixin，不需要就用 extend
 
 ```scss
 @mixin line($height: 20px) {
@@ -103,7 +110,7 @@ $base-line: 10px;
 }
 ```
 
-## debug
+## debug、warn、error
 
 參考: https://sass-lang.com/documentation/at-rules/debug
 
