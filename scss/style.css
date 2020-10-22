@@ -1,4 +1,18 @@
-.primary {
+.main__link {
+  text-decoration: underline;
+  color: blue;
+}
+
+.main__primary {
   color: #30c39e;
+}
+
+.main__line {
+  height: 50px;
+  line-height: 50px;
+}
+
+.main__line-height {
+  line-height: 120px;
 }
 /*# sourceMappingURL=style.css.map */

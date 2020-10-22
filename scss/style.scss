@@ -1,5 +1,36 @@
+//* variable
 $primary: #30c39e;
+$font: 8px 12px 16px 24px 30px 48px;
 
-.primary {
-  color: $primary;
+//* extend
+%text-link {
+  text-decoration: underline;
+  color: blue;
+}
+
+//* mixin
+@mixin line($height: 20px) {
+  height: $height;
+  line-height: $height;
+}
+
+//* function
+@function line-height($index: 1) {
+  $font-size: nth($font, $index);
+  @return $font-size * 4; // 去除小數點(無條件捨去)
+}
+
+.main {
+  &__primary {
+    color: $primary;
+  }
+  &__link {
+    @extend %text-link;
+  }
+  &__line {
+    @include line(50px);
+  }
+  &__line-height {
+    line-height: line-height(5);
+  }
 }
