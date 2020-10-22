@@ -87,7 +87,7 @@ div {
 ## function
 
 參考: https://icguanyu.github.io/scss/scss_2  
-搭配變數、mixin 使用，可以回傳，適合用於回傳計算屬性
+可以搭配 mixin 使用，可以回傳，適合用於需要**計算**的時候
 
 ```scss
 $font: 8px 12px 16px 24px 30px;
