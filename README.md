@@ -4,6 +4,35 @@
 
 ## variable
 
+參考: https://sass-lang.com/documentation/variables
+
+```scss
+$base-color: #c6538c;
+```
+
+```scss
+// Scope、Shadowing
+$variable: global-value;
+
+.content {
+  $variable: local-value;
+  value: $variable;
+}
+
+.sidebar {
+  value: $variable;
+}
+
+// 編譯後
+.content {
+  value: local value;
+}
+
+.sidebar {
+  value: global value;
+}
+```
+
 ## extend
 
 參考: https://icguanyu.github.io/scss/scss_2  
